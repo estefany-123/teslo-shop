@@ -7,7 +7,7 @@ import { ProductsModule } from './products/products.module';
   imports: [
     ConfigModule.forRoot(),
 
-    TypeOrmModule.forRoot({
+    TypeOrmModule.forRoot({ //esto es para manejar las variables de entorno 
       type: 'postgres',
       host: process.env.DB_HOST,
       port: parseInt(process.env.DB_PORT ?? '5432'),
